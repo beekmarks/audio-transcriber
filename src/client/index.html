@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Audio Transcriber</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Audio Transcriber</h1>
+        <div class="controls">
+            <button id="startButton" class="button">Start Listening</button>
+            <button id="stopButton" class="button" disabled>Stop Listening</button>
+        </div>
+        <div class="status-indicator">
+            <div id="statusDot"></div>
+            <span id="statusText">Ready</span>
+        </div>
+        <div class="transcription-container">
+            <h2>Transcription</h2>
+            <div id="transcriptionOutput" class="transcription-output"></div>
+        </div>
+    </div>
+    <script src="app.js" type="module"></script>
+</body>
+</html>

@@ -1,0 +1,37 @@
+{
+  "name": "audio-transcriber",
+  "version": "1.0.0",
+  "description": "A web application to record audio and transcribe it using AWS SageMaker",
+  "main": "dist/server/server.js",
+  "type": "module",
+  "scripts": {
+    "build": "tsc && node copyStatic.js",
+    "prestart": "pkill -f 'node dist/server/server.js' || true",
+    "start": "node dist/server/server.js",
+    "dev": "npm run prestart && tsc --watch & nodemon dist/server/server.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "audio",
+    "transcription",
+    "speech-to-text",
+    "whisper"
+  ],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@types/dotenv": "^8.2.3",
+    "@types/form-data": "^2.5.2",
+    "@types/node": "^20.11.0",
+    "@types/node-fetch": "^2.6.12",
+    "nodemon": "^3.0.2",
+    "typescript": "^5.3.3"
+  },
+  "dependencies": {
+    "@aws-sdk/client-sagemaker-runtime": "^3.496.0",
+    "@aws-sdk/credential-providers": "^3.496.0",
+    "dotenv": "^16.3.1",
+    "form-data": "^4.0.0",
+    "node-fetch": "^3.3.2"
+  }
+}
